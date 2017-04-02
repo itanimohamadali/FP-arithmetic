@@ -62,12 +62,14 @@ To run the 16-bit adder testbench:
 ```
 $make run16
 ```
-A gtkwave window similar to the following should appear,
+A gtkwave window similar to the following should appear, at the top left you can find the components, under it you find the signals, and to the right you find the graph.
 <img src="https://image.ibb.co/czjPiv/Screen_Shot_2017_04_03_at_12_51_54_AM.png" width="800">
+To add the signals to the graph, select the first signal, hold shift and select the last signal, then press on insert. You should see the following.
 <img src="https://image.ibb.co/hbkmwF/Screen_Shot_2017_04_03_at_12_53_54_AM.png" width="800">
+To make an std_logic_vector signal appear in decimal instead of hexadecimals, select the signal, right-click then Data Format/Decimal as shown below
 <img src="https://image.ibb.co/gNrRwF/Screen_Shot_2017_04_03_at_12_54_14_AM.png" width="800">
 
-Same for the 32-bit adder using:
+the same can be done for the 32-bit adder using:
 
 ```
 $make run32
