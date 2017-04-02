@@ -103,11 +103,11 @@ begin
     end generate ; -- stage5
 
     c_gen : for i in 0 to 31 generate
-        c(i) <= g_5(i) or (c_in AND p_5(i));
+        c(i) <= g_5(i) or (cin AND p_5(i));
     end generate ; -- c_gen
 
-    c_out <= c(31);
-    sum(0) <= c_in XOR p_in(0);
+    cout <= c(31);
+    sum(0) <= cin XOR p_in(0);
 
     addin : for i in 1 to 31 generate
         sum(i) <= c(i-1) XOR p_in(i);

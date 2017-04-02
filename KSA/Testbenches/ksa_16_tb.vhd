@@ -20,8 +20,8 @@ ARCHITECTURE behavior OF ksa_16_tb IS
     
 
    --Inputs
-   signal  A : std_logic_vector(15 downto 0) := "0000000000000000";
-   signal  B : std_logic_vector(15 downto 0) := "0000000000000000";
+   signal  A : std_logic_vector(15 downto 0) := "1000010000100000";
+   signal  B : std_logic_vector(15 downto 0) := "1000000010000000";
    signal Carry_in : std_logic := '0';
 
  	--Outputs
@@ -33,7 +33,7 @@ BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: ksa_16 PORT MAP (
-          A;B;Carry_in; S; Carry_out
+          A,B,Carry_in, S, Carry_out
         );
 
    -- Stimulus process
