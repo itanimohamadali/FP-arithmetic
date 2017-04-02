@@ -1,6 +1,6 @@
 build:  
-	ghdl -a src/*.vhd
-	ghdl -a Testbenches/*.vhd
+	ghdl -a KSA/src/*.vhd
+	ghdl -a KSA/Testbenches/*.vhd
 
 run16:  
 	ghdl -e ksa_16_tb
