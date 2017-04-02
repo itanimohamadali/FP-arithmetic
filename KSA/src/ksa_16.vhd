@@ -50,54 +50,54 @@ END COMPONENT;
     signal c    : std_logic_vector(15 downto 0);
 
 begin
-    stage0 : for i in 0 to 15 loop
+    stage0 : for i in 0 to 15 generate
         gpgen : gp_generator PORT MAP (x(i), y(i), g_in(i), p_in(i));
-    end loop ; -- stage0
+    end generate ; -- stage0
 
-    stage1buff : for i in 0 to 0 loop
+    stage1buff : for i in 0 to 0 generate
         g_1(i) <= g_in(i);
         p_1(i) <= p_in(i);
-    end loop ; -- stage1buff
+    end generate ; -- stage1buff
 
-    stage1 : for i in 0 to 14 loop
+    stage1 : for i in 0 to 14 generate
         gpgen : gp_combination PORT MAP (g_in(i), p_in(i), g_in(i+1), p_in(i+1), g_1(i+1), p_1(i+1));
-    end loop ; -- stage1
+    end generate ; -- stage1
 
-    stage2buff : for i in 0 to 1 loop
+    stage2buff : for i in 0 to 1 generate
         g_2(i) <= g_1(i);
         p_2(i) <= p_1(i);
-    end loop ; -- stage2buff
+    end generate ; -- stage2buff
 
-    stage2 : for i in 0 to 13 loop
+    stage2 : for i in 0 to 13 generate
         gpgen : gp_combination PORT MAP (g_1(i), p_1(i), g_1(i+2), p_1(i+2), g_2(i+2), p_2(i+2));
-    end loop ; -- stage2
+    end generate ; -- stage2
 
-    stage3buff : for i in 0 to 3 loop
+    stage3buff : for i in 0 to 3 generate
         g_3(i) <= g_2(i);
         p_3(i) <= p_2(i);
-    end loop ; -- stage3buff
+    end generate ; -- stage3buff
 
-    stage3 : for i in 0 to 11 loop
+    stage3 : for i in 0 to 11 generate
         gpgen : gp_combination PORT MAP (g_2(i), p_2(i), g_2(i+4), p_2(i+4), g_3(i+4), p_3(i+4));
-    end loop ; -- stage3
+    end generate ; -- stage3
 
-    stage4buff : for i in 0 to 7 loop
+    stage4buff : for i in 0 to 7 generate
         g_4(i) <= g_3(i);
         p_4(i) <= p_3(i);
-    end loop ; -- stage4buff
+    end generate ; -- stage4buff
 
-    stage4 : for i in 0 to 7 loop
+    stage4 : for i in 0 to 7 generate
         gpgen : gp_combination PORT MAP (g_3(i), p_3(i), g_3(i+8), p_3(i+8), g_4(i+8), p_4(i+8));
-    end loop ; -- stage4
+    end generate ; -- stage4
 
-    c_gen : for i in 0 to 15 loop
-        c(i) <= g_5(i) or (c_in AND p_5(i));
-    end loop ; -- c_gen
+    c_gen : for i in 0 to 15 generate
+        c(i) <= g_4(i) or (cin AND p_4(i));
+    end generate ; -- c_gen
 
-    c_out <= c(15);
-    sum(0) <= c_in XOR p_in(0);
+    cout <= c(15);
+    sum(0) <= cin XOR p_in(0);
 
-    addin : for i in 1 to 15 loop
+    addin : for i in 1 to 15 generate
         sum(i) <= c(i-1) XOR p_in(i);
-    end loop ; -- addin
+    end generate ; -- addin
 end arch;
