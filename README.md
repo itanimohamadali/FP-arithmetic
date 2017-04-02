@@ -10,36 +10,36 @@ Decimal Floating Point arithmetic implemented in vhdl based on kog-stone adder, 
 Xcode (https://developer.apple.com/xcode/)
 
 ```
-you can download it here: https://developer.apple.com/download/
+https://developer.apple.com/download/
 ```
 Xcode command line tools 
 
-```
+```BASH
 $xcode-select --install
 ```
 
 GHDL (http://ghdl.free.fr/)
 
 ```
-you can download it here: https://github.com/tgingold/ghdl/releases/tag/v0.33
+https://github.com/tgingold/ghdl/releases/tag/v0.33
 ```
 
 Macports (https://www.macports.org/)
 
 ```
-you can download it here: https://www.macports.org/install.php
+https://www.macports.org/install.php
 ```
 
 gtkwave (http://gtkwave.sourceforge.net/)
 
-```
+```BASH
 $sudo port install gtkwave
 ```
 
 X11 
 
 ```
-you can download it here: https://www.xquartz.org/
+https://www.xquartz.org/
 ```
 
 
