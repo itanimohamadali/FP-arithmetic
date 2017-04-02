@@ -20,9 +20,9 @@ ARCHITECTURE behavior OF ksa_16_tb IS
     
 
    --Inputs
-   signal  A : std_logic_vector(15 downto 0) := "";
-   signal  B : std_logic_vector(15 downto 0) := "";
-   signal Carry_in : std_logic := '1';
+   signal  A : std_logic_vector(15 downto 0) := "0000000000000000";
+   signal  B : std_logic_vector(15 downto 0) := "0000000000000000";
+   signal Carry_in : std_logic := '0';
 
  	--Outputs
    signal S : std_logic_vector(15 downto 0);
