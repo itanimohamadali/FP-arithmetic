@@ -62,6 +62,11 @@ To run the 16-bit adder testbench:
 ```
 $make run16
 ```
+A gtkwave window similar to the following should appear,
+
+![alt tag](https://image.ibb.co/czjPiv/Screen_Shot_2017_04_03_at_12_51_54_AM.png)
+![alt tag](https://image.ibb.co/hbkmwF/Screen_Shot_2017_04_03_at_12_53_54_AM.png)
+![alt tag](https://image.ibb.co/gNrRwF/Screen_Shot_2017_04_03_at_12_54_14_AM.png)
 
 Same for the 32-bit adder using:
 
