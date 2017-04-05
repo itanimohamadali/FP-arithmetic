@@ -2,7 +2,8 @@
 
 Decimal Floating Point arithmetic implemented in vhdl based on kog-stone adder, a parallel prefix form carry look-ahead adder. It supports operations on IEEE 794 single precision binary numbers.
 
-## Getting Started
+## Getting Started On MAC OS
+
 
 
 ### Prerequisites
@@ -43,7 +44,7 @@ https://www.xquartz.org/
 ```
 
 
-## Building
+## Building on MAC OS
 
 ### Kog-Stone Adder:
 
