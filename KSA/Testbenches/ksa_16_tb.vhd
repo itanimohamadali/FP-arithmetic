@@ -1,22 +1,13 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
- 
+USE work.fp_pkg.all;
+
 ENTITY ksa_16_tb IS
 END ksa_16_tb;
  
 ARCHITECTURE behavior OF ksa_16_tb IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
- 
-    COMPONENT ksa_16
-    PORT(
-        x   :   IN std_logic_vector(15 downto 0);
-        y   :   IN std_logic_vector(15 downto 0);
-        cin :   IN std_logic;
-        sum :   OUT std_logic_vector(15 downto 0);
-        cout:   OUT std_logic
-        );
-    END COMPONENT;
     
 
    --Inputs

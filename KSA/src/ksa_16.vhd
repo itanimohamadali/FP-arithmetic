@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+USE work.fp_pkg.all;
 
 entity ksa_16 is
     port(
@@ -13,25 +14,7 @@ end ksa_16;
 
 architecture arch of ksa_16 is
 
-COMPONENT gp_generator
-PORT(
-        x : IN std_logic;
-        y : IN std_logic;
-        g : OUT std_logic;
-        p : OUT std_logic
-    );
-END COMPONENT;
 
-COMPONENT gp_combination
-PORT(
-        g1 : IN std_logic;
-        p1 : IN std_logic;
-        g2 : IN std_logic;
-        p2 : IN std_logic;
-        go : OUT std_logic;
-        po : OUT std_logic
-    );
-END COMPONENT;
     signal g_in : std_logic_vector(15 downto 0);
     signal p_in : std_logic_vector(15 downto 0);
 
